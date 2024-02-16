@@ -1,0 +1,9 @@
+.card-slider {
+    overflow-x: auto;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.card-slider::-webkit-scrollbar {
+    display: none;
+}

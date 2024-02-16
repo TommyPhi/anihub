@@ -1,0 +1,89 @@
+/* Header.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+a {
+  font-family: Poppins;
+  font-weight: bold;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: #7e2ac3;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(126 42 195 / 10%);
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #7e2ac3;
+    outline: 0;
+    box-shadow: 0 0 0 4px rgb(126 42 195 / 10%);
+}
+
+.navbar-container {
+  position: relative;
+}
+
+/* Set the initial position of the search form to stick to the right */
+.ml-auto {
+  width: 200px;
+  margin-left: auto;
+  transition: all 0.8s ease-in-out;
+  position: absolute;
+  right: 0;
+}
+
+/* Define the transition for the expanded form */
+.expanded {
+  width: 100%; /* Expand the search form to the left */
+  z-index: 1;
+  transition: all 0.8s ease-in-out; /* Transition width property */
+}
+
+.navbar-links.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .ml-auto {
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links.fade-out {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+  
+  .navbar-links.fade-in {
+    opacity: 1;
+    max-height: 500px;
+    transition: all 0.6s ease;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .ml-auto {
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-links.fade-out {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+  
+  .navbar-links.fade-in {
+    opacity: 1;
+    max-height: 500px;
+    transition: all 0.6s ease;
+  }
+}
