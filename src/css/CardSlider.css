@@ -1,9 +1,86 @@
 .card-slider {
-    overflow-x: auto;
-    position: relative;
-    scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 .card-slider::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.card-slider-container {
+  position: relative;
+  height: 100%;
+}
+
+.card-slider-btns {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-container-left {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  height: 100%;
+}
+
+.nav-container-right {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  height: 100%;
+}
+
+.card-slider-nav-right,
+.card-slider-nav-left {
+  border: none;
+  transition: all 0.5s;
+}
+
+.card-slider-nav-right {
+  background: linear-gradient(
+    to right,
+    rgba(252, 252, 252, 0),
+    rgb(0, 0, 0, 0.75)
+  );
+  transition: opacity 0.5s ease;
+  opacity: 0.5;
+}
+
+.card-slider-nav-right:hover {
+    opacity: 1;
+    background: linear-gradient(
+        to right,
+        rgba(252, 252, 252, 0),
+        rgb(0, 0, 0, 0.75)
+      );
+    transition: opacity 0.5s ease;
+}
+
+.card-slider-nav-left {
+    opacity: 0.5;
+    background: linear-gradient(
+      to left,
+      rgba(252, 252, 252, 0),
+      rgb(0, 0, 0, 0.75)
+    );
+  }
+
+.card-slider-nav-left:hover {
+    opacity: 1;
+    background: linear-gradient(
+        to left,
+        rgba(252, 252, 252, 0),
+        rgb(0, 0, 0, 0.75)
+      );
+    transition: opacity 0.5s;
 }

@@ -77,6 +77,10 @@ export default function Home() {
         </div>
       </section>
       <Slider />
+      <div >
+        <h1>Upcoming Anime</h1>
+        <p>Look forward to these new and upcoming series or new seasons of your favorite anime!</p>
+      </div>
       <CardSlider />
     </div>
   );

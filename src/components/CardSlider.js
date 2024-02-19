@@ -39,6 +39,7 @@ export default function CardSlider(props) {
                     }
                   }
                 `,
+        headers: {},
       })
       .then(function (response) {
         setData(response.data.data.Page.media);
@@ -53,8 +54,52 @@ export default function CardSlider(props) {
   }, []);
 
   return (
-    <div>
-      <div class="container-fluid d-flex mb-5 pt-3 card-slider slider-bg" ref={slider}>
+    <div class="card-slider-container">
+      <div className="card-slider-btns">
+        <div class="nav-container-left">
+          <button
+            onClick={() => {
+              scroll(-650);
+            }}
+            className="card-slider-nav-left"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="white"
+              class="bi bi-chevron-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="nav-container-right">
+          <button onClick={() => scroll(650)} className="card-slider-nav-right">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="white"
+              class="bi bi-chevron-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="container-fluid d-flex ps-5 pt-3 card-slider slider-bg"
+        ref={slider}
+      >
         <div class="d-flex justify-content-center text-start">
           {data.map((anime, index) => (
             <Card
@@ -67,8 +112,6 @@ export default function CardSlider(props) {
           ))}
         </div>
       </div>
-      <button onClick={() => scroll(-650)}>LEFT</button>
-      <button onClick={() => scroll(650)}>RIGHT</button>
     </div>
   );
 }

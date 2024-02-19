@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logoDark.png";
 
 export default function Header() {
   const [expanded, setExpanded] = useState(false);
@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary navbar-dark">
         <Container>
           <Navbar.Brand href="/">
             <img
@@ -31,7 +31,7 @@ export default function Header() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="navbar-container">
-              <Nav className={`me-auto ${expanded ? 'fade-out' : 'fade-in'} navbar-links`}>
+              <Nav className={`me-auto ${expanded ? 'fade-out' : 'fade-in'} navbar-links text-white`}>
                 <Nav.Link href="#link">Anime</Nav.Link>
                 <Nav.Link href="#link">Manga</Nav.Link>
                   <NavDropdown title="Account" id="basic-nav-dropdown">
