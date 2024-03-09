@@ -77,8 +77,8 @@ export default function Home() {
         </div>
       </section>
       <Slider />
-      <div >
-        <h1>Upcoming Anime</h1>
+      <div class="container-fluid my-4">
+        <h1 class="display-5 fw-semibold">Upcoming Anime</h1>
         <p>Look forward to these new and upcoming series or new seasons of your favorite anime!</p>
       </div>
       <CardSlider />

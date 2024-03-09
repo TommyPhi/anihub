@@ -97,7 +97,7 @@ export default function CardSlider(props) {
         </div>
       </div>
       <div
-        class="container-fluid d-flex ps-5 pt-3 card-slider slider-bg"
+        class="container-fluid d-flex pt-3 card-slider slider-bg"
         ref={slider}
       >
         <div class="d-flex justify-content-center text-start">

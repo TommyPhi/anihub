@@ -31,7 +31,7 @@ export default function Header() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="navbar-container">
-              <Nav className={`me-auto ${expanded ? 'fade-out' : 'fade-in'} navbar-links text-white`}>
+              <Nav className={`me-auto ${expanded ? 'fade-out' : 'fade-in'} navbar-links`}>
                 <Nav.Link href="#link">Anime</Nav.Link>
                 <Nav.Link href="#link">Manga</Nav.Link>
                   <NavDropdown title="Account" id="basic-nav-dropdown">
