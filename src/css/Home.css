@@ -5,3 +5,25 @@
     border-radius: 20px;
     border: rgb(198, 198, 198) solid 1px;
 }
+
+.custom-shape-divider-bottom-1710061304 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1710061304 svg {
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 144px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1710061304 .shape-fill {
+    fill: #320b57;
+}

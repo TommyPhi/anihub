@@ -11,7 +11,7 @@ export default function Card(props) {
         }}
       >
       </div>
-      <small>{props.animeTitle}</small>
+      <small class="fw-bolder">{props.animeTitle}</small>
     </div>
   );
 }

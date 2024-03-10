@@ -1,6 +1,6 @@
 .card {
     width: 230px;
-    height: 320px;
+    height: 320px !important;
     transition: all 0.5s;
     overflow: hidden;
 }

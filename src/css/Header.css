@@ -6,6 +6,10 @@
   color: black;
 }
 
+.form-control {
+  background-color: #f6f3f1;
+}
+
 a {
   font-family: Poppins;
   font-weight: bold;
@@ -15,14 +19,14 @@ a {
 input:hover {
   outline: none;
   border-color: #7e2ac3;
-  background-color: #dfdfdf;
+  background-color: #f6f3f1;
   box-shadow: 0 0 0 4px rgb(126 42 195 / 10%);
   transition: all 0.5s;
 }
 
 .form-control:focus {
-    color: var(--bs-body-color);
-    background-color: var(--bs-body-bg);
+    color: #f6f3f1;
+    background-color: #f6f3f1;
     border-color: #7e2ac3;
     outline: 0;
     box-shadow: 0 0 0 4px rgb(126 42 195 / 10%);

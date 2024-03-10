@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <div>
-      <Navbar expand="lg" className="bg-body-tertiary navbar-dark">
+      <Navbar expand="lg" className="navbar-dark">
         <Container>
           <Navbar.Brand href="/">
             <img

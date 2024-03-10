@@ -12,6 +12,11 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
+      <style jsx>{`
+      body {
+        background-color: #f6f3f1;
+      }
+      `}</style>
     </Router>
   );
 }

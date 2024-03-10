@@ -4,9 +4,56 @@ import Card from "../components/Card";
 import "../css/CardSlider.css";
 
 export default function CardSlider(props) {
-  const [category, setCategory] = useState("");
+  const [status, setStatus] = useState(props.status);
+  const [isSeasonal, setIsSeasonal] = useState(props.isSeasonal);
   const [data, setData] = useState([]);
   const slider = useRef(null);
+  const currentDate = new Date();
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const currentMonth = months[currentDate.getMonth() - 1];
+  console.log(currentMonth);
+  let currentSeason;
+
+  if (
+    currentMonth === "March" ||
+    currentMonth === "April" ||
+    currentMonth === "May"
+  ) {
+    currentSeason = "SPRING";
+  } else if (
+    currentMonth === "June" ||
+    currentMonth === "July" ||
+    currentMonth === "August"
+  ) {
+    currentSeason = "SUMMER";
+  } else if (
+    currentMonth === "September" ||
+    currentMonth === "October" ||
+    currentMonth === "November"
+  ) {
+    currentSeason = "FALL";
+  } else if (
+    currentMonth === "December" ||
+    currentMonth === "January" ||
+    currentMonth === "February"
+  ) {
+    currentSeason = "WINTER";
+  } else {
+    currentSeason = null;
+  }
 
   const scroll = (scrollOffset) => {
     slider.current.scrollLeft += scrollOffset;
@@ -25,7 +72,9 @@ export default function CardSlider(props) {
                         hasNextPage
                         perPage
                       }
-                    media (isAdult: false, type: ANIME, sort: POPULARITY_DESC, status: NOT_YET_RELEASED) {
+                    media (isAdult: false, type: ANIME, sort: POPULARITY_DESC, status: ${status}, ${
+          isSeasonal ? `season: ${currentSeason}` : ""
+        }) {
                       title {
                         english
                         romaji
