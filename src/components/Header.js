@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <div>
-      <Navbar expand="lg" className="navbar-dark">
+      <Navbar expand="lg" className="navbar-light">
         <Container>
           <Navbar.Brand href="/">
             <img
@@ -32,8 +32,8 @@ export default function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="navbar-container">
               <Nav className={`me-auto ${expanded ? 'fade-out' : 'fade-in'} navbar-links`}>
-                <Nav.Link href="#link">Anime</Nav.Link>
-                <Nav.Link href="#link">Manga</Nav.Link>
+                <Nav.Link href="#anime">Anime</Nav.Link>
+                <Nav.Link href="#manga">Manga</Nav.Link>
                   <NavDropdown title="Account" id="basic-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">My Lists</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>

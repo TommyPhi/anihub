@@ -84,6 +84,9 @@ export default function CardSlider(props) {
                         extraLarge
                         color
                       }
+                      description
+                      bannerImage
+                      genres
                       }
                     }
                   }
@@ -105,7 +108,7 @@ export default function CardSlider(props) {
   return (
     <div class="card-slider-container">
       <div className="card-slider-btns">
-        <div class="nav-container-left">
+        <div class="nav-container-left card-slider-nav-container">
           <button
             onClick={() => {
               scroll(-650);
@@ -127,7 +130,7 @@ export default function CardSlider(props) {
             </svg>
           </button>
         </div>
-        <div class="nav-container-right">
+        <div class="nav-container-right card-slider-nav-container">
           <button onClick={() => scroll(650)} className="card-slider-nav-right">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -154,9 +157,13 @@ export default function CardSlider(props) {
             <Card
               key={index}
               cardImage={anime.coverImage.extraLarge}
+              animeColor = {anime.coverImage.color}
               animeTitle={
                 anime.title.english ? anime.title.english : anime.title.romaji
               }
+              description = {anime.description.replace(/<[^>]+>|\\n|\\r/g, '')}
+              bannerImage = {anime.bannerImage}
+              genres = {anime.genres}
             />
           ))}
         </div>

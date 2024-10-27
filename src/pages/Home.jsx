@@ -54,7 +54,7 @@ export default function Home() {
     <div>
       <section class="pb-5 position-relative">
         <div class="container pt-5">
-          <div class="row align-items-center justify-content-center mb-5">
+          <div class="row align-items-center justify-content-center mb-5 jumbotron">
             <div class="col-12 col-md-10 col-lg-5 mb-5 mb-lg-0">
               <div class="mb-5">
                 <h2 class="display-4 fw-bold" style={{color: "#320b57"}}>Welcome to AniHub!</h2>
@@ -89,7 +89,7 @@ export default function Home() {
         </div>
       </section>
       
-      <div class="text-light py-4" style={{ backgroundColor: "#320b57" }}>
+      <div class="text-light py-4 home-content-subsection" style={{ backgroundColor: "#320b57" }}>
         <div class="container-fluid ps-4">
           <h1 class="display-5 fw-bold" style={{color: "#7e2ac3"}}>Upcoming Anime</h1>
           <p>
@@ -100,7 +100,7 @@ export default function Home() {
         <CardSlider status="NOT_YET_RELEASED" />
       </div>
 
-      <div class="text-light py-4" style={{ backgroundColor: "#320b57" }}>
+      <div class="text-light py-4 home-content-subsection" style={{ backgroundColor: "#320b57" }}>
         <div class="container-fluid ps-4">
           <h1 class="display-5 fw-bold" style={{color: "#7e2ac3"}}>Seasonal Favorites</h1>
           <p>
@@ -110,7 +110,7 @@ export default function Home() {
         <CardSlider status="RELEASING" isSeasonal = {true} />
       </div>
 
-      <div class="text-light py-4" style={{ backgroundColor: "#320b57" }}>
+      <div class="text-light py-4 home-content-subsection" style={{ backgroundColor: "#320b57" }}>
         <div class="container-fluid ps-4">
           <h1 class="display-5 fw-bold" style={{color: "#7e2ac3"}}>Top Rated</h1>
           <p>

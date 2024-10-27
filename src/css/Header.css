@@ -15,6 +15,10 @@ a {
   font-weight: bold;
 }
 
+.navbar-toggler {
+  border: var(--bs-border-width) solid #7e2ac3;
+}
+
 .input:focus,
 input:hover {
   outline: none;
@@ -50,6 +54,14 @@ input:hover {
   width: 100%; /* Expand the search form to the left */
   z-index: 1;
   transition: all 0.8s ease-in-out; /* Transition width property */
+}
+
+.nav-link:hover {
+  color: #7e2ac3;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show  {
+  color: #320b57;
 }
 
 .navbar-links.fade-out {

@@ -1,13 +1,12 @@
 .card {
-    width: 230px;
-    height: 320px !important;
+    width: 280px;
+    height: 400px !important;
     transition: all 0.5s;
     overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    filter: brightness(0.4);
+    transform: scale(1.05);
     transition: all 0.3s ease;
 }
 
@@ -15,4 +14,80 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.card-banner {
+    height: 30%;
+}
+
+.card-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 5px 5px;
+}
+
+.card-info {
+    color: white;
+    padding: 15px;
+}
+
+.card-body {
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #1f3d4738;
+    backdrop-filter: brightness(0.6) blur(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    padding: 0 !important;
+}
+
+.card-body h1 {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-info .genre {
+    background-color: #320b57;
+    border-radius: 15px;
+    padding: 2px 4px;
+    margin: 5px;
+}
+
+.card-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+    font-size: 9pt;
+    text-align: left;
+}
+
+.card-body small {
+    font-size: 8pt;
+}
+
+.card:hover .card-body {
+    opacity: 1;
+    transition: all 0.3s ease;
 }
